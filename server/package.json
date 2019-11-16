@@ -1,0 +1,21 @@
+{
+	"name": "server",
+	"version": "1.0.0",
+	"description": "server part of multi-container application",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index.js",
+		"dev": "nodemon"
+	},
+	"author": "Akhlakur Rahman",
+	"license": "ISC",
+	"dependencies": {
+		"express": "4.17.1",
+		"pg": "7.12.1",
+		"redis": "2.8.0",
+		"cors": "2.8.5",
+		"nodemon": "1.19.4",
+		"body-parser": "1.19.0"
+	}
+}
