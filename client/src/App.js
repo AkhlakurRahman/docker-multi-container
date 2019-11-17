@@ -7,16 +7,16 @@ import OtherPage from './OtherPage';
 
 function App() {
 	return (
-		<div className='App'>
-			<header className='App-header'>
-				<Link to='/' />
-				<Link to='/other' />
-			</header>
-			<Router>
+		<Router>
+			<div className='App'>
+				<header className='App-header'>
+					<Link to='/' />
+					<Link to='/other' />
+				</header>
 				<Route exact path='/' component={Fib} />
 				<Route path='/other' component={OtherPage} />
-			</Router>
-		</div>
+			</div>
+		</Router>
 	);
 }
 
