@@ -1,0 +1,15 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t akrahman/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker container run -e CI=true akrahman/react-test npm run test -- --coverage
+
+after_success:
+  - docker build -t akrahman/multi-client ./client
+  - docker build -t akrahman/multi-nginx ./nginx
+  - docker build -t akrahman/multi-server ./server
+  - docker build -t akrahman/multi-worker ./worker
